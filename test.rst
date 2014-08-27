@@ -15,17 +15,16 @@ However, in practice it is sometimes useful to implement a catch-all exception c
 Example
 =======
 
-The following code snippet uses a catch-all exception to handle the division by zero error. This violates the general best practice in programming of making exceptions as specific as possible.
+The following code snippet uses a catch-all exception to handle the division by zero error. This violates the general best practice of making exceptions as specific as possible.
 
 .. code:: python
 
     import sys
-    (x, y) = (5, 0)
     try:
-        z = x / y
+        5 / 0
     except: # Catch-all exception clause
         e = sys.exc_info()[0]
-        print("Unexpected Exception:", e) # Prints "Unexpected Exception: ZeroDivisionError"
+        print "Unexpected Exception:" , e
 
 Solution
 ========
@@ -35,14 +34,14 @@ Make the exception clause as specific as possible. In the case of this example, 
 .. code:: python
 
     import sys
-    (x, y) = (5, 0)
     try:
-        z = x / y
-    except ZeroDevisionError:
+        5 / 0
+    except ZeroDivisionError:
         print "Expected Exception: Divide By Zero"
     except: # Catch-all exception clause
         e = sys.exc_info()[0]
-        print("Unexpected Exception:", e)
+        print "Unexpected Exception:" , e
+
 
 References
 ==========
