@@ -48,10 +48,10 @@ Make the exception clause as specific as possible. In the case of this example, 
 References
 ==========
 
-`"Handling Exceptions" - Python Software Foundation Wiki<https://wiki.python.org/moin/HandlingExceptions>`
+`"Handling Exceptions" - Python Software Foundation Wiki<https://wiki.python.org/moin/HandlingExceptions>`_
 
-`"W0702" - PyLint Messages Wiki<http://pylint-messages.wikidot.com/messages:w0702>`
+`"W0702" - PyLint Messages Wiki<http://pylint-messages.wikidot.com/messages:w0702>`_
 
-`"Catch What You Can Handle" - Cunningham & Cunningham<http://c2.com/cgi/wiki?CatchWhatYouCanHandle>`
+`"Catch What You Can Handle" - Cunningham & Cunningham<http://c2.com/cgi/wiki?CatchWhatYouCanHandle>`_
 
-`"Built-In Exceptions" - Python 2.7.8 Documentation<https://docs.python.org/2/library/exceptions.html>`
+`"Built-In Exceptions" - Python 2.7.8 Documentation<https://docs.python.org/2/library/exceptions.html>`_
