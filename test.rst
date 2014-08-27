@@ -19,13 +19,14 @@ Example
 The following code snippet uses a catch-all exception to handle the division by zero error. This violates the general best practice in programming of making exceptions as specific as possible.
 
 .. code:: python
-import sys
-(x, y) = (5, 0)
-try:
-  z = x / y
-except: # Catch-all exception clause
-  e = sys.exc_info()[0]
-  print("Unexpected Exception:", e) // Prints "Exception: ZeroDivisionError"
+
+    import sys
+    (x, y) = (5, 0)
+    try:
+        z = x / y
+    except: # Catch-all exception clause
+        e = sys.exc_info()[0]
+        print("Unexpected Exception:", e) // Prints "Exception: ZeroDivisionError"
 
 Solution
 ========
@@ -33,20 +34,24 @@ Solution
 Make the exception clause as specific as possible. In the case of this example, use the built-in Python exception "ZeroDivisionError" to handle the division by zero exception. Note that the code still uses a catch-all exception for general reporting purposes.
 
 .. code:: python
-import sys
-(x, y) = (5, 0)
-try:
-  z = x / y
-except ZeroDevisionError:
-  print "Expected Exception: Divide By Zero"
-except: # Catch-all exception clause
-  e = sys.exc_info()[0]
-  print("Unexpected Exception:", e) // Prints "Exception: ZeroDivisionError"
+
+    import sys
+    (x, y) = (5, 0)
+    try:
+        z = x / y
+    except ZeroDevisionError:
+        print "Expected Exception: Divide By Zero"
+    except: # Catch-all exception clause
+        e = sys.exc_info()[0]
+        print("Unexpected Exception:", e) // Prints "Exception: ZeroDivisionError"
 
 References
 ==========
 
 _"Handling Exceptions" - Python Software Foundation Wiki:https://wiki.python.org/moin/HandlingExceptions
+
 _"W0702" - PyLint Messages Wiki:http://pylint-messages.wikidot.com/messages:w0702
+
 _"Catch What You Can Handle" - Cunningham & Cunningham:http://c2.com/cgi/wiki?CatchWhatYouCanHandle
+
 _"Built-In Exceptions" - Python 2.7.8 Documentation:https://docs.python.org/2/library/exceptions.html
