@@ -1,10 +1,9 @@
 ==============================
 No Exception Type(s) Specified
 ==============================
-PyLint:W0702
+PyLint : W0702
 
-A catch-all exception clause was encountered. A catch-all exception clause is one that
-does not specify the type of exception(s) to catch.
+A catch-all exception clause was encountered. A catch-all exception clause is one that does not specify the type of exception(s) to catch.
 
 Description
 ===========
@@ -26,7 +25,7 @@ The following code snippet uses a catch-all exception to handle the division by 
         z = x / y
     except: # Catch-all exception clause
         e = sys.exc_info()[0]
-        print("Unexpected Exception:", e) # Prints "Exception: ZeroDivisionError"
+        print("Unexpected Exception:", e) # Prints "Unexpected Exception: ZeroDivisionError"
 
 Solution
 ========
@@ -43,15 +42,15 @@ Make the exception clause as specific as possible. In the case of this example, 
         print "Expected Exception: Divide By Zero"
     except: # Catch-all exception clause
         e = sys.exc_info()[0]
-        print("Unexpected Exception:", e) # Prints "Exception: ZeroDivisionError"
+        print("Unexpected Exception:", e)
 
 References
 ==========
 
-`"Handling Exceptions" - Python Software Foundation Wiki <https://wiki.python.org/moin/HandlingExceptions>`_
+`"Handling Exceptions" : Python Software Foundation Wiki <https://wiki.python.org/moin/HandlingExceptions>`_
 
-`"W0702" - PyLint Messages Wiki <http://pylint-messages.wikidot.com/messages:w0702>`_
+`"W0702" : PyLint Messages Wiki <http://pylint-messages.wikidot.com/messages:w0702>`_
 
-`"Catch What You Can Handle" - Cunningham & Cunningham <http://c2.com/cgi/wiki?CatchWhatYouCanHandle>`_
+`"Catch What You Can Handle" : Cunningham & Cunningham <http://c2.com/cgi/wiki?CatchWhatYouCanHandle>`_
 
-`"Built-In Exceptions" - Python 2.7.8 Documentation <https://docs.python.org/2/library/exceptions.html>`_
+`"Built-In Exceptions" : Python 2.7.8 Documentation <https://docs.python.org/2/library/exceptions.html>`_
