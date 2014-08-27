@@ -26,7 +26,7 @@ The following code snippet uses a catch-all exception to handle the division by 
         z = x / y
     except: # Catch-all exception clause
         e = sys.exc_info()[0]
-        print("Unexpected Exception:", e) // Prints "Exception: ZeroDivisionError"
+        print("Unexpected Exception:", e) # Prints "Exception: ZeroDivisionError"
 
 Solution
 ========
@@ -43,7 +43,7 @@ Make the exception clause as specific as possible. In the case of this example, 
         print "Expected Exception: Divide By Zero"
     except: # Catch-all exception clause
         e = sys.exc_info()[0]
-        print("Unexpected Exception:", e) // Prints "Exception: ZeroDivisionError"
+        print("Unexpected Exception:", e) # Prints "Exception: ZeroDivisionError"
 
 References
 ==========
